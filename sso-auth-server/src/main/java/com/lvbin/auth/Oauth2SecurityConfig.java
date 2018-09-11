@@ -40,6 +40,8 @@ public class Oauth2SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                .cors()
+                .and()
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/oauth/authorize/**", "/oauth/token/**", "/login*", "/insertUser").permitAll()

@@ -39,7 +39,6 @@ public class ApiController {
 		return Instant.now();
 	}
 
-	@CrossOrigin
 	@RequestMapping("/success")
 	public String success( ) throws IOException {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -51,7 +50,6 @@ public class ApiController {
 		return objectMapper.writeValueAsString(map);
 	}
 
-	@CrossOrigin
 	@RequestMapping("/loginerror")
 	public String loginerror( ) throws IOException {
 		log.warn("login error!");
@@ -61,7 +59,6 @@ public class ApiController {
 		return objectMapper.writeValueAsString(map);
 	}
 
-	@CrossOrigin
 	@RequestMapping("/getname")
 	public String getname( ) throws IOException {
 		log.warn("getname");
