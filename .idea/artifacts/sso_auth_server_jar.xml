@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact name="sso-auth-server:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/sso_auth_server_jar</output-path>
+    <root id="root">
+      <element id="archive" name="sso-auth-server.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/sso-auth-server/META-INF/MANIFEST.MF" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

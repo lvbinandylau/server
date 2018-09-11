@@ -1,0 +1,1 @@
+java -jar D:\BaiduNetdiskDownload\spring-oauth2-demo\sso-auth-server\build\libs\sso-auth-server.jar

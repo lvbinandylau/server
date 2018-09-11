@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":sso-auth-client" external.linked.project.path="$MODULE_DIR$/../../../sso-auth-client" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="spring-oauth2-demo" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../sso-auth-client">
+      <excludeFolder url="file://$MODULE_DIR$/../../../sso-auth-client/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../sso-auth-client/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../sso-auth-client/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

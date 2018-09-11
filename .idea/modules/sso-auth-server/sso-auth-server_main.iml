@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":sso-auth-server:main" external.linked.project.path="$MODULE_DIR$/../../../sso-auth-server" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="spring-oauth2-demo" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/../../../sso-auth-server/src/main/java/com/lvbin/auth/ResourceServerConfig.java</file>
+          <file>file://$MODULE_DIR$/../../../sso-auth-server/src/main/java/com/lvbin/auth/WebConfig.java</file>
+          <file>file://$MODULE_DIR$/../../../sso-auth-server/src/main/java/com/lvbin/auth/Oauth2Config.java</file>
+        </fileset>
+      </configuration>
+    </facet>
+    <facet type="web" name="Web">
+      <configuration>
+        <webroots />
+      </configuration>
+    </facet>
+  </component>
+</module>

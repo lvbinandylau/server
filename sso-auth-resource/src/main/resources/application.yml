@@ -1,0 +1,29 @@
+# 认证服务器地址
+auth-server: http://localhost:8080
+
+server:
+  port: 8086
+security:
+  oauth2:
+    client:
+      client-id: testclient
+      client-secret: testclient
+      scope: test
+      access-token-uri: ${auth-server}/oauth/token
+      user-authorization-uri: ${auth-server}/oauth/authorize
+    resource:
+      jwt:
+        #解析jwt令牌所需要密钥的地址
+        key-uri: ${auth-server}/oauth/token_key
+
+spring:
+  application:
+    name: sso-res
+feign:
+  okhttp:
+    enabled: true
+logging:
+  level:
+    org:
+      springframework:
+        security: debug

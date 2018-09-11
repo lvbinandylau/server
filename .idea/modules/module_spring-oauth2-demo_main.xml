@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_spring-oauth2-demo_main" default="compile.module.spring-oauth2-demo_main">
+  <dirname property="module.spring-oauth2-demo_main.basedir" file="${ant.file.module_spring-oauth2-demo_main}"/>
+  
+  <property name="module.jdk.home.spring-oauth2-demo_main" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.spring-oauth2-demo_main" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.spring-oauth2-demo_main" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.spring-oauth2-demo_main" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="spring-oauth2-demo_main.output.dir" value="${module.spring-oauth2-demo_main.basedir}/../../out/production/classes"/>
+  <property name="spring-oauth2-demo_main.testoutput.dir" value="${module.spring-oauth2-demo_main.basedir}/../../out/production/classes"/>
+  
+  <path id="spring-oauth2-demo_main.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="spring-oauth2-demo_main.module.production.classpath">
+    <path refid="${module.jdk.classpath.spring-oauth2-demo_main}"/>
+  </path>
+  
+  <path id="spring-oauth2-demo_main.runtime.production.module.classpath">
+    <pathelement location="${spring-oauth2-demo_main.output.dir}"/>
+  </path>
+  
+  <path id="spring-oauth2-demo_main.module.classpath">
+    <path refid="${module.jdk.classpath.spring-oauth2-demo_main}"/>
+    <pathelement location="${spring-oauth2-demo_main.output.dir}"/>
+  </path>
+  
+  <path id="spring-oauth2-demo_main.runtime.module.classpath">
+    <pathelement location="${spring-oauth2-demo_main.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.spring-oauth2-demo_main">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.spring-oauth2-demo_main">
+    <patternset refid="excluded.from.module.spring-oauth2-demo_main"/>
+  </patternset>
+  
+  
+  <target name="compile.module.spring-oauth2-demo_main" depends="compile.module.spring-oauth2-demo_main.production,compile.module.spring-oauth2-demo_main.tests" description="Compile module spring-oauth2-demo_main"/>
+  
+  <target name="compile.module.spring-oauth2-demo_main.production" depends="register.custom.compilers" description="Compile module spring-oauth2-demo_main; production classes"/>
+  
+  <target name="compile.module.spring-oauth2-demo_main.tests" depends="register.custom.compilers,compile.module.spring-oauth2-demo_main.production" description="compile module spring-oauth2-demo_main; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.spring-oauth2-demo_main" description="cleanup module">
+    <delete dir="${spring-oauth2-demo_main.output.dir}"/>
+    <delete dir="${spring-oauth2-demo_main.testoutput.dir}"/>
+  </target>
+</project>

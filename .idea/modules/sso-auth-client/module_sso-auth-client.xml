@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_sso-auth-client" default="compile.module.sso-auth-client">
+  <dirname property="module.sso-auth-client.basedir" file="${ant.file.module_sso-auth-client}"/>
+  
+  <property name="module.jdk.home.sso-auth-client" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.sso-auth-client" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.sso-auth-client" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.sso-auth-client" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="sso-auth-client.output.dir" value="${module.sso-auth-client.basedir}/../../../out/production/sso-auth-client"/>
+  <property name="sso-auth-client.testoutput.dir" value="${module.sso-auth-client.basedir}/../../../out/test/sso-auth-client"/>
+  
+  <path id="sso-auth-client.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="sso-auth-client.module.production.classpath">
+    <path refid="${module.jdk.classpath.sso-auth-client}"/>
+  </path>
+  
+  <path id="sso-auth-client.runtime.production.module.classpath">
+    <pathelement location="${sso-auth-client.output.dir}"/>
+  </path>
+  
+  <path id="sso-auth-client.module.classpath">
+    <path refid="${module.jdk.classpath.sso-auth-client}"/>
+    <pathelement location="${sso-auth-client.output.dir}"/>
+  </path>
+  
+  <path id="sso-auth-client.runtime.module.classpath">
+    <pathelement location="${sso-auth-client.testoutput.dir}"/>
+    <pathelement location="${sso-auth-client.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.sso-auth-client">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.sso-auth-client">
+    <patternset refid="excluded.from.module.sso-auth-client"/>
+  </patternset>
+  
+  
+  <target name="compile.module.sso-auth-client" depends="compile.module.sso-auth-client.production,compile.module.sso-auth-client.tests" description="Compile module sso-auth-client"/>
+  
+  <target name="compile.module.sso-auth-client.production" depends="register.custom.compilers" description="Compile module sso-auth-client; production classes"/>
+  
+  <target name="compile.module.sso-auth-client.tests" depends="register.custom.compilers,compile.module.sso-auth-client.production" description="compile module sso-auth-client; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.sso-auth-client" description="cleanup module">
+    <delete dir="${sso-auth-client.output.dir}"/>
+    <delete dir="${sso-auth-client.testoutput.dir}"/>
+  </target>
+</project>
