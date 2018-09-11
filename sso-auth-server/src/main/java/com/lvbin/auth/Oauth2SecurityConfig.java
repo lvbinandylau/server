@@ -43,7 +43,7 @@ public class Oauth2SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/oauth/authorize/**", "/oauth/token/**", "/login*", "/insertUser").permitAll()
-                .antMatchers("/success").hasRole("test")
+                .antMatchers("/getname").hasRole("user")
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .anyRequest().authenticated()
                 .and().formLogin()

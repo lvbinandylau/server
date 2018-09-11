@@ -28,20 +28,19 @@ public class SysUser implements UserDetails{
         log.warn("role:"+role);
         List<String> roles = new ArrayList<>();
         if ((role & 8) == 8)
-            roles.add("admin");
+            roles.add("ROLE_admin");
         if ((role & 4) == 4)
-            roles.add("user");
+            roles.add("ROLE_user");
         if ((role & 2) == 2)
-            roles.add("visit");
+            roles.add("ROLE_visit");
         if ((role & 1) == 1)
-            roles.add("lock");
+            roles.add("ROLE_lock");
 
         StringBuffer roleStr = new StringBuffer();
         for (String role:roles)
         {
             roleStr.append(role).append(",");
         }
-        log.warn(roleStr.toString());
         roleStr = new StringBuffer(roleStr.substring(0, roleStr.length() - 1));
         log.warn(roleStr.toString());
         return AuthorityUtils.commaSeparatedStringToAuthorityList(roleStr.toString());
