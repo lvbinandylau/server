@@ -16,10 +16,6 @@ import java.time.Instant;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @author Shenluw
- * 创建日期：2018/6/27 11:47
- */
 @RestController
 public class ApiController {
 	private static final Logger log = LoggerFactory.getLogger(ApiController.class);

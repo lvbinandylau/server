@@ -6,10 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
-/**
- * @author Shenluw
- * 创建日期：2018/3/22 16:14
- */
+
 @Component
 public class CustomUserDetailsServiceImpl implements UserDetailsService {
     @Autowired

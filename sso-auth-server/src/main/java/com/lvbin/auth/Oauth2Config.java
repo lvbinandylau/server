@@ -26,10 +26,7 @@ import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFacto
 import javax.sql.DataSource;
 import java.util.Arrays;
 
-/**
- * @author Shenluw
- * 创建日期：2018/3/21 15:02
- */
+
 @Configuration
 public class Oauth2Config extends AuthorizationServerConfigurerAdapter implements ApplicationRunner {
     private static final Logger log = LoggerFactory.getLogger(Oauth2Config.class);

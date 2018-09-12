@@ -14,10 +14,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- * @author Shenluw
- * 创建日期：2018/3/21 14:41
- */
+
 @SpringBootApplication
 @EnableAuthorizationServer
 public class AuthenticationApplication {
