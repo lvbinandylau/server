@@ -66,7 +66,6 @@ public class ApiController {
 		return objectMapper.writeValueAsString(map);
 	}
 
-
 	@RequestMapping(value = "/insertUser", method = RequestMethod.POST)
 	public String InsertUser(@RequestParam("name") String username, @RequestParam("pwd") String password) throws IOException {
 		PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
